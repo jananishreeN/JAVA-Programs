@@ -1,0 +1,22 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner s=new Scanner(System.in);
+        int n=s.nextInt();
+        int t=n;
+        int rem=0;
+        if(n>0){
+            while(n!=0){
+                 rem=(10*rem)+(n%10);
+                 n/=10;          
+        }
+        }
+       if (t==rem)
+        System.out.println("true");
+       else
+        System.out.println("false");
+    }
+}
