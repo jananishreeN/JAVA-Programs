@@ -1,0 +1,25 @@
+import java.util.*;
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        long n = s.nextLong(); 
+
+        n = Math.abs(n); 
+        if (n == 0) {
+            System.out.println("0 0");
+            return;
+        }
+
+        long max = 0, min = 9;
+
+        while (n != 0) {
+            long digit = n % 10;
+            if (digit > max) max = digit;
+            if (digit < min) min = digit;
+            n /= 10;
+        }
+
+        System.out.println(max + " " + min);
+    }
+}
