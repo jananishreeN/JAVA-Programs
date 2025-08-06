@@ -1,0 +1,23 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner s=new Scanner(System.in);
+        int n=s.nextInt();
+        int t=n;
+        int sep=0;
+        int sum=0;
+        while(n!=0){
+            sep=n%10;
+            sum+=sep;
+             n/=10;
+        }
+        n=t;
+        if(n%sum==0)
+            System.out.println("Harshad Number");//EX:18 → 1 + 8 = 9 → 18 is divisible by 9 → Harshad
+        else
+            System.out.println("Not Harshad Number");
+    }
+}
